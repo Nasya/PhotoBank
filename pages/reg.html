@@ -1,19 +1,18 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<title>Photo Bank</title>
-		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+	<title>Реєстрація</title>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/reg.css">
+</head><body>
 
 
-	</head>
-	<body>
+<body>
+	<section>
 		
-
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar">
       <div class="container">
         <div class="navbar-header">
@@ -27,58 +26,48 @@
           <a class="navbar-brand" href="#">Контакти</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" id="#myform" action="http://localhost:8080/Bank/myrest/HelloWorld" method="post">
+          <form class="navbar-form navbar-right" role="form" id="#myform">
             <div class="form-group" id="form-group1">
-              <input type="text" placeholder="Email" class="form-control" name="LogIn" id="form-control1">
+              <input type="text" placeholder="Email" class="form-control" id="form-control1">
             </div>
             <div class="form-group" id="form-group2">
-              <input type="password" placeholder="Пароль" class="form-control" name="Password" id="form-control2">
+              <input type="password" placeholder="Пароль" class="form-control" id="form-control2">
             </div>
-            <button type="submit" name="submit" value="LogIn" class="success" id="successful" onclick="submitButton()"> Увійти</button>
-            <button type="button" id="reg" onclick="gotoS()">Реєстрація</button>
+            <button type="button" class="success" id="successful" onclick="logIn()">Увійти</button>
+
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-	<section class="logobar">
-		<img src="pics/logo.png" id="logo">
 	</section>
-    <section class="bsearch" id="bodyk">
-    	<div id="container" class="container">
- 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      		<ol class="carousel-indicators">
-        		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        		<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        		<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-      		</ol>
-      		<div class="carousel-inner">
-      			<div class="container">
-      				<div id="search">
-    					<form  id="headerimg" align="center" >
-							<input type="text" align="center"id="tform" />
-							<input type="button" value="Search" id="but"/></td>
-						</form>
-					</div>
-      			</div>
-        		<div class="item active">
-          			<img src="http://counsellingu.com/wp-content/uploads/2013/10/slider_sea4.jpg">
-        		</div>
-        		<div class="item">
-          			<img src="http://www.falkenbergslax.se/media/1327/Topp-strand1.jpg">
-        		</div>
-        		<div class="item">
-          			<img src="http://www.granjonquera.com/assets/imgs/tiendas/boboli/boboli-carousel-2.jpg">
-        		</div>
-      		</div>
-      		<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      		<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    	</div>
-    	</div>
-    	
-   	</section>
+	<section class="logobar">
+		<img src="../pics/logo.png" id="logo">
+	</section>
+	<section class="forms" align="center">
+		<div id="main_formreg">
+			<form id="lpform">
+				<h3>Autentification info</h3>
+				Login: <input type="text" align="center" id="lform"/> <br/>
+				<br/>
+				Password: <input type="text" align="center" id="pform"/> <br/>
+			</form>
+		</div>
+		<div id="off_formreg">
+			<form id="nsform">
+				<h4>Profile info</h4>
+				Name: <input type="text" align="center" id="nform" /><br/>
+				<br/>
+				Secondname: <input type="text" align="center" id="secform"/><br/>
+				<br/>
+				Surname: <input type="text" align="center" id="sform"/><br/>
+			</form>
+		</div>
+		<button type="button" class="submitform">Submit</button>
+		<button type="button" class="cancel">Cancel</button> 
+	</section>
 
 	<section class="categories">
+		<hr id="line" size="5">
 		<h3 id="si">Search into categories</h3>
 		<section class="categories-wrapper">
 			<div class="one">
@@ -182,12 +171,12 @@
 						<a href=""> Decoration</a>
 					</li>
 				</ul>
-
+			</div>
 		</section>
 	</section>
-
 	<footer> Made by our team</footer>
+
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	</body>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
