@@ -27,15 +27,21 @@
           <a class="navbar-brand" href="#">Контакти</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form" id="#myform" action="http://localhost:8080/Bank/myrest/HelloWorld" method="post">
-            <div class="form-group" id="form-group1">
-              <input type="text" placeholder="Email" class="form-control" name="LogIn" id="form-control1">
+          <form class="navbar-form navbar-right" role="form" id="myform" action="http://localhost:8080/Bank/myrest/HelloWorld" method="post">
+          	<div id="first_pan">
+	            <div class="form-group" id="form-group1">
+	              <input type="text" placeholder="Email" class="form-control" name="LogIn" id="form-control1">
+	            </div>
+	            <div class="form-group" id="form-group2">
+	              <input type="password" placeholder="Пароль" class="form-control" name="Password" id="form-control2">
+	            </div>
+	            <button type="submit" name="submit" value="LogIn" class="success" id="successful" > Увійти</button>
+	            <button type="button" id="reg">Реєстрація</button>
             </div>
-            <div class="form-group" id="form-group2">
-              <input type="password" placeholder="Пароль" class="form-control" name="Password" id="form-control2">
-            </div>
-            <button type="submit" name="submit" value="LogIn" class="success" id="successful" onclick="submitButton()"> Увійти</button>
-            <button type="button" id="reg" onclick="gotoS()">Реєстрація</button>
+            <div id="second_panel">
+            	<button type="button" id="myCab">Мій кабінет</button>
+            	<button type="button" id="logOut">Вийти</button>
+        	</div>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -55,7 +61,7 @@
       		<div class="carousel-inner">
       			<div class="container">
       				<div id="search">
-    					<form  id="headerimg" align="center" >
+    					<form  id="headering" align="center" >
 							<input type="text" align="center"id="tform" />
 							<input type="button" value="Search" id="but"/></td>
 						</form>
@@ -82,7 +88,19 @@
 		<h3 id="si">Search into categories</h3>
 		<section class="categories-wrapper">
 			<div class="one">
-				<ul class="fcol">
+				<ul class="column">
+					<li>
+						<a href=""> Abstract</a>
+					</li>
+					<li>
+						<a href=""> Bstract</a>
+					</li>
+					<li>
+						<a href=""> Ctract</a>
+					</li>
+					<li>
+						<a href=""> Dtract</a>
+					</li>
 					<li>
 						<a href=""> Abstract</a>
 					</li>
@@ -101,28 +119,12 @@
 					<li>
 						<a href=""> Abstract</a>
 					</li>
-				</ul>
-				<ul class="scol">
 					<li>
-						<a href=""> Decoration</a>
+						<a href=""> Abstract</a>
 					</li>
 					<li>
-						<a href=""> Decoration</a>
+						<a href=""> Abstract</a>
 					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-				</ul>
-				<ul class="tcol">
 					<li>
 						<a href=""> Decoration</a>
 					</li>
@@ -141,8 +143,6 @@
 					<li>
 						<a href=""> Decoration</a>
 					</li>
-				</ul>
-				<ul class="focol">
 					<li>
 						<a href=""> Decoration</a>
 					</li>
@@ -162,27 +162,7 @@
 						<a href=""> Decoration</a>
 					</li>
 				</ul>
-					<ul class="ficol">
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
-					<li>
-						<a href=""> Decoration</a>
-					</li>
 				</ul>
-
 		</section>
 	</section>
 

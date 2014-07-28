@@ -9,7 +9,17 @@
   	<link rel="stylesheet" type="text/css" href="../css/reg.css">
   	<link rel="stylesheet" type="text/css" href="../css/users.css">
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-
+    <script type="text/javascript" src="../js/user.js"></script>
+    <script type="text/javascript">
+          jQuery(function(){
+          
+          var data = ["http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg", "http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg","http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg"];
+            for (i = 0; i < data.length; i++) { 
+              $("#slider").append('<img src='  + data [i]+ ' alt="" id="ph" onclick="openImageWindow()" />');
+              '<br>' 
+            }
+      });
+</script>
 </head>
 <body>
 	<section class="head">	
@@ -40,82 +50,82 @@
       </div>
     </div>
 	</section>
+  <!-- Search section-->
+  <section class="searchline">
+    <div>
+      <form  id="headerimg" align="center" >
+              <input type="text" align="center"id="Wrform" />
+              <input type="button" value="Search" id="btnsearch"/></td>
+      </form>
+    </div>
+  </section>
+<!--Images  -->
   <section class="mainplot">
+    <div id="slider">
+    </div>
+    <!-- Menu form -->
     <div>
       <table class="main">
         <tr><td>
           <table class="btns">
-            <tr>
-          <td>
-            <button type="button" id="cbtn">Second</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" id="cbtn">Second</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" id="cbtn">Second</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" id="cbtn">Second</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button type="button" id="cbtn">Second</button>
-          </td>
-        </tr>
-          </table>
-        </td>
-          <td>
-            <table class="imgs">
-              <tr>
-            <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          </tr>
-          <tr>
-            <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          <td>
-            <img src="http://i2.cdn.turner.com/cnn/dam/assets/130530161523-100-beaches-crane-beach-horizontal-gallery.jpg" id="ph">
-          </td>
-          </tr>
-            </table>
-          </td>
-
-        </tr>
-
-      </table>
-    </div>          
-  </section>
+            <div id="btnbar">
+            <div class="float right">
+    <div id="debug"></div>
+    <p class="links"><a href="#" class="plus">+</a>/<a href="#" class="minus">-</a></p>
+    <div class="panel">
+        <ul>
+            <li><a href="#" title="Меню 1">Меню 1</a>
+                <ul>
+                 <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+                 <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+                 <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#" title="Меню 2">Меню 2</a>
+                <ul>
+                 <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+                 <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+                 <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#" title="Меню 3">Меню 3</a>
+                <ul>
+                 <li><a href="#" title="Элемент 1">Элемент 1</a></li>
+                 <li><a href="#" title="Элемент 2">Элемент 2</a></li>
+                 <li><a href="#" title="Элемент 3">Элемент 3</a></li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div></table></td></tr></table></div></section>
+<!-- Upload form-->
+    <section class="uploadform">
+      <form action="rest/files/upload" method="post" enctype="multipart/form-data" id="upform">
+        <p id="fileinput">
+          Select a file : <input type="file" name="file" size="45" id="inp" />
+        </p>
+        <input type="submit" value="Upload It" id="inpbtn" />
+      </form>
+    </section>
+    <!-- Categories section-->
     <section class="categories">
     <hr id="line" size="5">
     <h3 id="si">Search into categories</h3>
     <section class="categories-wrapper">
       <div class="one">
-        <ul class="fcol">
+        <ul class="column">
+          <li>
+            <a href=""> Abstract</a>
+          </li>
+          <li>
+            <a href=""> Bstract</a>
+          </li>
+          <li>
+            <a href=""> Ctract</a>
+          </li>
+          <li>
+            <a href=""> Dtract</a>
+          </li>
           <li>
             <a href=""> Abstract</a>
           </li>
@@ -134,28 +144,12 @@
           <li>
             <a href=""> Abstract</a>
           </li>
-        </ul>
-        <ul class="scol">
           <li>
-            <a href=""> Decoration</a>
+            <a href=""> Abstract</a>
           </li>
           <li>
-            <a href=""> Decoration</a>
+            <a href=""> Abstract</a>
           </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-        </ul>
-        <ul class="tcol">
           <li>
             <a href=""> Decoration</a>
           </li>
@@ -174,8 +168,6 @@
           <li>
             <a href=""> Decoration</a>
           </li>
-        </ul>
-        <ul class="focol">
           <li>
             <a href=""> Decoration</a>
           </li>
@@ -195,27 +187,7 @@
             <a href=""> Decoration</a>
           </li>
         </ul>
-          <ul class="ficol">
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
-          <li>
-            <a href=""> Decoration</a>
-          </li>
         </ul>
-      </div>
     </section>
   </section>
   <footer> Made by our team</footer>

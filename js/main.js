@@ -1,13 +1,23 @@
 function gotoS () { 
     window.location = 'pages/reg.html';
+
 } 
- function submitButton() {
-        var Auth = {
+function submitButton() {
+            var Auth = {
             login: $('#login').val(),
             password: $('#password').val()
         };
-        addData(Auth)
+       addData(Auth)
 }
+$(document).ready(function(){
+    $("#successful").click(function () {
+          $("#first_pan").hide("slow");
+        });
+    $("#successful").click(function () {
+        $("#second_panel").show();
+        });
+  });
+
 function addData(data){// pass your data in method
         $.ajax({
             type: "POST",

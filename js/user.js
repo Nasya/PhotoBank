@@ -1,36 +1,38 @@
+var menu1 = null;
+var menu2 = null;
 $(document).ready(function(){
-    
-    //hide message_body after the first one
-    $(".message_list .message_body:gt(0)").hide();
-    
-    //hide message li after the 5th
-    $(".message_list li:gt(4)").show();
-
-    
-    //toggle message_body
-    $(".message_head").click(function(){
-      $(this).next(".message_body").slideToggle(500)
-      return false;
+  menu1 = parseInt($(".right").css("top").substring(0,$(".right").css("top").indexOf("px")));
+  menu2 = $(window).height() - 96;
+  
+  $(window).scroll(function () { 
+    var offset1 = menu1 + $(document).scrollTop() + "px";
+    var offset2 = menu2 - $('.left .panel').height() + $(document).scrollTop() + "px";
+    $('.right').animate({top:offset1},{duration:500,queue:false});
+    $('.left').animate({top:offset2},{duration:1000,queue:false});
+  });
+  
+  $('.panel ul li ul').hide();
+  
+    $('.panel ul li:has(ul) > a').click(function() {
+        $(this).parent().find('ul').slideToggle();  
+        return false;      
     });
-
-    //collapse all messages
-    $(".collpase_all_message").click(function(){
-      $(".message_body").slideUp(500)
-      return false;
+   
+    $('a.plus').click(function(){
+       $(this).parent().next().find('ul li ul').slideUp('fast');
+       return false; 
     });
-
-    //show all messages
-    /*$(".show_all_message").click(function(){
-      $(this).hide()
-      $(".show_recent_only").show()
-      $(".message_list li:gt(4)").slideDown()
-      return false;
-    });*/
-
-    //show recent messages only
-    $(".show_recent_only").click(function(){
-      $(this).hide()
-      $(".show_all_message").show()
-      $(".message_list li:gt(4)").slideUp()
-      return false;
-    });});
+    
+    $('a.minus').click(function(){
+       $(this).parent().next().find('ul li ul').slideDown('slow');
+       return false; 
+    });
+    
+});
+/*function openImageWindow(src) {
+    var image = new Image();
+    image.src = src;
+    var width = image.width;
+    var height = image.height;
+    window.open(src,"Image","width=" + width + ",height=" + height);
+  }*/
